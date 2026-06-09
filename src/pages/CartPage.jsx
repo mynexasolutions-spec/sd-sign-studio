@@ -27,7 +27,7 @@ export default function CartPage() {
   return (
     <div style={{ background: '#f5f5f5', minHeight: '100vh', paddingTop: 'calc(var(--nav-h) + 40px)', paddingBottom: '80px', paddingLeft: '24px', paddingRight: '24px' }}>
       <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-        <h1 style={{ fontSize: '32px', fontWeight: 800, color: 'var(--black)', fontFamily: 'serif', marginBottom: '32px' }}>Your Cart</h1>
+        <h1 style={{ fontSize: 'clamp(40px, 5.5vw, 64px)', fontWeight: 900, color: 'var(--black)', fontFamily: 'var(--font)', letterSpacing: '-1.5px', marginBottom: '32px', lineHeight: '1.1' }}>Your Cart</h1>
 
         {cartItems.length === 0 ? (
           <div style={{ background: '#fff', borderRadius: '16px', padding: '64px 24px', textAlign: 'center', boxShadow: '0 4px 20px rgba(0,0,0,0.03)' }}>

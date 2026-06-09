@@ -24,31 +24,31 @@ export default function HomePage() {
       <HeroSection />
       <CategoriesSection />
       <AboutSection />
-      <WhyChooseUs />
       <ServicesSection />
       <FeaturedWork />
-      <TestimonialsSection />
+      <WhyChooseUs />
       <ProcessSection />
+      <TestimonialsSection />
       
       {/* Home Page Contact Form Section */}
-      <section className="section" id="contact" style={{ background: 'linear-gradient(180deg, #ffffff 0%, #f9fafb 100%)', borderTop: '1px solid #e5e7eb' }}>
+      <section className="section" id="contact" style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #121212 100%)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
         <div className="section-inner" style={{ maxWidth: '800px' }}>
           <div className="section-header" style={{ marginBottom: '44px' }}>
-            <span className="section-eyebrow" style={{ background: 'rgba(232,0,13,0.06)', border: '1px solid rgba(232,0,13,0.12)', color: 'var(--red)' }}>Get a Quote</span>
-            <h2 className="section-title" style={{ color: '#111827' }}>Request a Free <span className="red">Consultation</span></h2>
-            <p style={{ fontSize: '15px', color: '#4b5563', marginTop: '8px', lineHeight: 1.6 }}>
+            <span className="section-eyebrow" style={{ background: 'rgba(232,0,13,0.12)', border: '1px solid rgba(232,0,13,0.3)', color: 'var(--red)' }}>Get a Quote</span>
+            <h2 className="section-title" style={{ color: '#ffffff' }}>Request a Free <span className="red">Consultation</span></h2>
+            <p style={{ fontSize: '15px', color: 'rgba(255,255,255,0.7)', marginTop: '8px', lineHeight: 1.6 }}>
               Fill out the form below, upload your logo or design assets, and our Glasgow team will compile a custom pricing estimate within 24 hours.
             </p>
           </div>
 
           <div style={{
-            background: '#ffffff',
+            background: 'var(--gray)',
             padding: 'clamp(20px, 5vw, 40px)',
             borderRadius: '24px',
-            border: '1.5px solid #e5e7eb',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.01)'
+            border: '1.5px solid rgba(255,255,255,0.05)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.5)'
           }}>
-            <ContactForm isHome={true} theme="light" />
+            <ContactForm isHome={true} theme="dark" />
           </div>
         </div>
       </section>

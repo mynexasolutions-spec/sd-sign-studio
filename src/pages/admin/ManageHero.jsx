@@ -131,27 +131,59 @@ export default function ManageHero() {
               Hero Copy Text
             </h3>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <div>
-                <label style={labelStyle}>Headline (Recommended: 3rd Point)</label>
-                <input
-                  value={settings.headline}
-                  onChange={e => handleChange('headline', e.target.value)}
-                  style={inputStyle}
-                  placeholder="We design, print, and install your brand everywhere."
-                />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              {/* Default/Common Text */}
+              <div style={{ padding: '16px', background: '#f9fafb', borderRadius: '10px', border: '1.5px solid #e5e7eb' }}>
+                <h4 style={{ fontSize: '14px', fontWeight: 700, color: '#111827', marginBottom: '12px' }}>Default / Fallback Text</h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <div>
+                    <label style={labelStyle}>Default Headline</label>
+                    <input
+                      value={settings.headline}
+                      onChange={e => handleChange('headline', e.target.value)}
+                      style={inputStyle}
+                      placeholder="We design, print, and install your brand everywhere."
+                    />
+                  </div>
+                  <div>
+                    <label style={labelStyle}>Default Subheadline</label>
+                    <textarea
+                      value={settings.subheadline}
+                      onChange={e => handleChange('subheadline', e.target.value)}
+                      rows={3}
+                      style={{ ...inputStyle, resize: 'vertical' }}
+                      placeholder="Glasgow's premier vehicle wrapping, storefront signage, and custom print fabrication agency..."
+                    />
+                  </div>
+                </div>
               </div>
-              
-              <div>
-                <label style={labelStyle}>Subheadline / Description (max 3 lines)</label>
-                <textarea
-                  value={settings.subheadline}
-                  onChange={e => handleChange('subheadline', e.target.value)}
-                  rows={3}
-                  style={{ ...inputStyle, resize: 'vertical' }}
-                  placeholder="Glasgow's premier vehicle wrapping, storefront signage, and custom print fabrication agency."
-                />
+
+              {/* Video Specific Text */}
+              <div style={{ padding: '16px', background: '#f9fafb', borderRadius: '10px', border: '1.5px solid #e5e7eb' }}>
+                <h4 style={{ fontSize: '14px', fontWeight: 700, color: '#111827', marginBottom: '12px' }}>Video Mode Override Text (Optional)</h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <div>
+                    <label style={labelStyle}>Video Mode Headline</label>
+                    <input
+                      value={settings.videoHeadline || ''}
+                      onChange={e => handleChange('videoHeadline', e.target.value)}
+                      style={inputStyle}
+                      placeholder="Leave blank to use Default Headline"
+                    />
+                  </div>
+                  <div>
+                    <label style={labelStyle}>Video Mode Subheadline</label>
+                    <textarea
+                      value={settings.videoSubheadline || ''}
+                      onChange={e => handleChange('videoSubheadline', e.target.value)}
+                      rows={2}
+                      style={{ ...inputStyle, resize: 'vertical' }}
+                      placeholder="Leave blank to use Default Subheadline"
+                    />
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
 
@@ -330,15 +362,6 @@ export default function ManageHero() {
                               placeholder="Description / Subheadline for this image"
                             />
                           </div>
-                          <div>
-                            <label style={{ ...labelStyle, fontSize: '12px', marginBottom: '4px' }}>Slide Showcase Caption</label>
-                            <input
-                              value={slide?.caption || ''}
-                              onChange={e => handleSlideTextChange(idx, 'caption', e.target.value)}
-                              style={{ ...inputStyle, padding: '6px 10px', fontSize: '13px' }}
-                              placeholder="Text shown under image in showcase card"
-                            />
-                          </div>
                         </div>
 
                       </div>
@@ -395,10 +418,14 @@ export default function ManageHero() {
               <div style={{ position: 'absolute', inset: 0, padding: '16px', display: 'flex', flexDirection: 'column', justifyContent: 'center', background: 'linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.5) 100%)', zIndex: 1 }}>
                 <div style={{ fontSize: '9px', fontWeight: 800, color: 'var(--red)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '4px' }}>Signage &amp; Wrapping</div>
                 <h5 style={{ fontSize: '14px', fontWeight: 800, color: '#111827', margin: '0 0 6px', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
-                  {settings.mediaType === 'slideshow' ? (settings.slides?.[0]?.headline || settings.headline) : settings.headline}
+                  {settings.mediaType === 'slideshow' 
+                    ? (settings.slides?.[0]?.headline || settings.slideshowHeadline || settings.headline) 
+                    : (settings.videoHeadline || settings.headline)}
                 </h5>
                 <p style={{ fontSize: '11px', color: '#4b5563', margin: '0 0 12px', lineHeight: 1.3, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
-                  {settings.mediaType === 'slideshow' ? (settings.slides?.[0]?.description || settings.subheadline) : settings.subheadline}
+                  {settings.mediaType === 'slideshow' 
+                    ? (settings.slides?.[0]?.description || settings.slideshowSubheadline || settings.subheadline) 
+                    : (settings.videoSubheadline || settings.subheadline)}
                 </p>
                 <div style={{ display: 'flex', gap: '6px' }}>
                   <span style={{ fontSize: '8px', padding: '4px 8px', background: 'var(--red)', color: '#fff', fontWeight: 700, borderRadius: '4px' }}>Get Quote</span>

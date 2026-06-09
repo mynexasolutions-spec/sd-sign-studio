@@ -1,6 +1,10 @@
 const DEFAULT_SETTINGS = {
   headline: "We design, print, and install your brand everywhere.",
   subheadline: "Glasgow's premier vehicle wrapping, storefront signage, and custom print fabrication agency. Built to make your brand unmissable.",
+  videoHeadline: "",
+  videoSubheadline: "",
+  slideshowHeadline: "",
+  slideshowSubheadline: "",
   mediaType: "video", // "video" or "slideshow"
   videoUrl: "https://vjs.zencdn.net/v/oceans.mp4",
   slides: [

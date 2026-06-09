@@ -238,7 +238,7 @@
   letter-spacing: 2px; text-transform: uppercase;
 }
 .section-title {
-  font-size: clamp(40px, 6vw, 64px); font-weight: 900; text-transform: capitalize; letter-spacing: -1px;
+  font-size: clamp(40px, 5.5vw, 64px); font-weight: 900; text-transform: capitalize; letter-spacing: -1.5px;
   color: var(--white); line-height: 1.1;
 }
 .section-title .red { 
@@ -320,8 +320,8 @@
   letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;
 }
 .about-heading {
-  font-size: clamp(36px, 5vw, 52px); font-weight: 900;
-  line-height: 1.1; color: var(--white); margin-bottom: 0; text-align: left; letter-spacing: -1px;
+  font-size: clamp(40px, 5.5vw, 64px); font-weight: 900;
+  line-height: 1.1; color: var(--white); margin-bottom: 0; text-align: left; letter-spacing: -1.5px;
 }
 .about-heading .red { 
   background: linear-gradient(to right, var(--red), #ff4d4d);
@@ -347,9 +347,9 @@
   background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.1); color: var(--black);
 }
 .bento-content h2 {
-  font-size: clamp(36px, 5vw, 52px); font-weight: 900;
+  font-size: clamp(40px, 5.5vw, 64px); font-weight: 900;
   text-transform: capitalize; line-height: 1.1; color: var(--black);
-  margin-bottom: 24px; letter-spacing: -1px;
+  margin-bottom: 24px; letter-spacing: -1.5px;
 }
 .bento-content h2 .red { color: var(--red); }
 .bento-content p {
@@ -503,8 +503,8 @@
   text-align: center;
 }
 .cta-left h2 {
-  font-size: clamp(32px, 4vw, 48px); font-weight: 900;
-  text-transform: capitalize; color: #fff; line-height: 1.15;
+  font-size: clamp(40px, 5.5vw, 64px); font-weight: 900;
+  text-transform: capitalize; color: #fff; line-height: 1.1; letter-spacing: -1.5px;
   margin-bottom: 10px;
 }
 .cta-left h2 .red { color: var(--red); }
@@ -674,8 +674,8 @@ footer {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
 }
 .shop-banner h1 {
-  font-size: clamp(36px, 5vw, 56px); font-weight: 900;
-  color: #fff; letter-spacing: -1px; line-height: 1.1; margin-bottom: 12px;
+  font-size: clamp(40px, 5.5vw, 64px); font-weight: 900;
+  color: #fff; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 12px;
 }
 .shop-banner p {
   font-size: 18px; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto;

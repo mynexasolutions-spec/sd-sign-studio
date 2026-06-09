@@ -16,7 +16,7 @@ export default function AccountPage() {
   return (
     <div style={{ background: '#f5f5f5', minHeight: '100vh', padding: 'calc(var(--nav-h) + 40px) 24px 80px' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <h1 style={{ fontSize: '32px', fontWeight: 800, color: 'var(--black)', fontFamily: 'serif', marginBottom: '32px' }}>My Account</h1>
+        <h1 style={{ fontSize: 'clamp(40px, 5.5vw, 64px)', fontWeight: 900, color: 'var(--black)', fontFamily: 'var(--font)', letterSpacing: '-1.5px', marginBottom: '32px', lineHeight: '1.1' }}>My Account</h1>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '32px' }}>
           

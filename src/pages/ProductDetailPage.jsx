@@ -158,7 +158,7 @@ export default function ProductDetailPage() {
           <div style={{ color: '#E8000D', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '2px', fontSize: '13px', marginBottom: '14px' }}>
             {product.category}
           </div>
-          <h1 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 900, color: '#111', lineHeight: 1.1, marginBottom: '20px', letterSpacing: '-0.5px' }}>
+          <h1 style={{ fontSize: 'clamp(40px, 5.5vw, 64px)', fontWeight: 900, color: '#111', lineHeight: 1.1, marginBottom: '20px', letterSpacing: '-1.5px' }}>
             {product.name}
           </h1>
 
@@ -323,15 +323,13 @@ export default function ProductDetailPage() {
               <div style={{ marginTop: '36px', padding: '28px 28px', background: 'linear-gradient(135deg, #111 0%, #1a1a1a 100%)', borderRadius: '16px' }}>
                 <p style={{ fontSize: '18px', fontWeight: 800, color: '#fff', margin: '0 0 6px' }}>Ready to get started?</p>
                 <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.55)', margin: '0 0 20px' }}>Get a free quote — no obligation.</p>
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/quote"
                   className="btn-red"
                   style={{ textDecoration: 'none', padding: '13px 28px', fontSize: '14px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '100%', boxSizing: 'border-box' }}
                 >
                   Get a Free Quote
-                </a>
+                </Link>
               </div>
             </div>
           )}

@@ -64,11 +64,21 @@ export default function ContactPage() {
         }
       `}</style>
 
-      <div style={{ background: 'var(--bg-primary)', minHeight: '100vh' }}>
+      <div style={{
+        background: '#ffffff',
+        color: '#111827',
+        minHeight: '100vh',
+        '--bg-primary': '#ffffff',
+        '--bg-secondary': '#f9fafb',
+        '--text-primary': '#111827',
+        '--text-secondary': '#374151',
+        '--text-muted': '#6b7280',
+        '--border-color': '#e5e7eb'
+      }}>
         {/* Hero Banner */}
         <div className="shop-banner">
           <div className="shop-banner-inner">
-            <h1 style={{ fontWeight: 900 }}>Contact Us</h1>
+            <h1 style={{ fontFamily: 'serif', fontWeight: 600 }}>Contact Us</h1>
             <p>Get in touch with our team for quotes, designs, and branding inquiries.</p>
             <div className="shop-breadcrumb" style={{ justifyContent: 'center', marginTop: '16px', color: 'rgba(255,255,255,0.7)' }}>
               <Link to="/" style={{ color: 'rgba(255,255,255,0.7)' }}>Home</Link>
@@ -83,7 +93,7 @@ export default function ContactPage() {
 
             {/* ── Contact Info ── */}
             <div>
-              <h2 style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '16px' }}>
+              <h2 style={{ fontSize: 'clamp(40px, 5.5vw, 64px)', fontWeight: 900, color: 'var(--text-primary)', marginBottom: '16px', letterSpacing: '-1.5px', lineHeight: 1.1 }}>
                 Let's Build Something Great
               </h2>
               <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '32px' }}>
@@ -97,7 +107,7 @@ export default function ContactPage() {
                     key={title}
                     style={{ padding: '18px 16px', background: 'var(--bg-secondary)', border: '1.5px solid var(--border-color)', borderRadius: '14px' }}
                   >
-                    <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(232,0,13,0.05)', color: 'var(--red)', display: 'flex', alignItems: 'center', justifycontent: 'center', marginBottom: '12px', fontSize: '20px' }}>
+                    <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(232,0,13,0.05)', color: 'var(--red)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '12px', fontSize: '20px' }}>
                       <span style={{ margin: 'auto' }}>{icon}</span>
                     </div>
                     <h4 style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '6px' }}>{title}</h4>
@@ -128,10 +138,10 @@ export default function ContactPage() {
             </div>
 
             {/* ── Contact Form Panel ── */}
-            <div style={{ background: 'var(--bg-secondary)', padding: 'clamp(20px, 5vw, 40px)', borderRadius: '20px', border: '1.5px solid var(--border-color)', boxShadow: '0 10px 30px rgba(0,0,0,0.01)' }}>
+            <div style={{ background: 'var(--bg-secondary)', padding: 'clamp(20px, 5vw, 40px)', borderRadius: '20px', border: '1.5px solid var(--border-color)', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>Send a Message</h3>
               <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '24px' }}>Fields marked * are required. You can attach drawings/files below.</p>
-              <ContactForm />
+              <ContactForm theme="light" />
             </div>
 
           </div>

@@ -42,7 +42,7 @@ export default function LoginPage() {
   return (
     <div style={{ background: '#f5f5f5', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 24px' }}>
       <div style={{ background: '#fff', padding: '40px', borderRadius: '16px', width: '100%', maxWidth: '440px', boxShadow: '0 10px 40px rgba(0,0,0,0.05)' }}>
-        <h1 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--black)', marginBottom: '8px', fontFamily: 'serif', textAlign: 'center' }}>Welcome Back</h1>
+        <h1 style={{ fontSize: 'clamp(40px, 5.5vw, 64px)', fontWeight: 900, color: 'var(--black)', marginBottom: '8px', fontFamily: 'var(--font)', letterSpacing: '-1.5px', textAlign: 'center', lineHeight: '1.1' }}>Welcome Back</h1>
         <p style={{ color: 'rgba(0,0,0,0.5)', textAlign: 'center', marginBottom: '32px' }}>Sign in to your account</p>
 
         <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

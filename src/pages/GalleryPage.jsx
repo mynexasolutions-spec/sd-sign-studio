@@ -42,11 +42,11 @@ export default function GalleryPage() {
 
   return (
     <>
-      <div style={{ background: 'var(--black)', minHeight: '100vh', paddingTop: 'var(--nav-h)' }}>
+      <div style={{ background: '#fff', minHeight: '100vh' }}>
         {/* Banner */}
         <div className="shop-banner">
           <div className="shop-banner-inner">
-            <h1 style={{ fontWeight: 900 }}>Our Gallery</h1>
+            <h1 style={{ fontFamily: 'serif', fontWeight: 600 }}>Our Gallery</h1>
             <p>Explore some of our recent vehicle wraps, storefront installations, and print projects.</p>
             <div className="shop-breadcrumb" style={{ justifyContent: 'center', marginTop: '16px', color: 'rgba(255,255,255,0.7)' }}>
               <Link to="/" style={{ color: 'rgba(255,255,255,0.7)' }}>Home</Link>
@@ -68,11 +68,11 @@ export default function GalleryPage() {
               fontWeight: 700,
               cursor: 'pointer',
               transition: 'all 0.2s',
-              background: activeTab === 'all' ? 'var(--red)' : 'var(--gray)',
-              color: activeTab === 'all' ? '#fff' : 'var(--text)',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+              background: activeTab === 'all' ? 'var(--red)' : '#f3f4f6',
+              color: activeTab === 'all' ? '#fff' : '#374151',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
               border: '1.5px solid',
-              borderColor: activeTab === 'all' ? 'var(--red)' : 'rgba(255,255,255,0.05)'
+              borderColor: activeTab === 'all' ? 'var(--red)' : '#e5e7eb'
             }}
           >
             All Work
@@ -90,11 +90,11 @@ export default function GalleryPage() {
                 fontWeight: 700,
                 cursor: 'pointer',
                 transition: 'all 0.2s',
-                background: activeTab === title ? 'var(--red)' : 'var(--gray)',
-                color: activeTab === title ? '#fff' : 'var(--text)',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+                background: activeTab === title ? 'var(--red)' : '#f3f4f6',
+                color: activeTab === title ? '#fff' : '#374151',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
                 border: '1.5px solid',
-                borderColor: activeTab === title ? 'var(--red)' : 'rgba(255,255,255,0.05)'
+                borderColor: activeTab === title ? 'var(--red)' : '#e5e7eb'
               }}
             >
               {title}
@@ -114,29 +114,29 @@ export default function GalleryPage() {
             }}>
               {filteredItems.map(item => (
                 <div
-                  key={item.id}
-                  onClick={() => setSelectedImage(item)}
-                  style={{
-                    borderRadius: '12px',
-                    overflow: 'hidden',
-                    background: 'var(--gray)',
-                    border: '1.5px solid rgba(255,255,255,0.05)',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease',
-                    position: 'relative'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-4px)'
-                    e.currentTarget.style.boxShadow = '0 12px 24px rgba(0,0,0,0.4)'
-                    const img = e.currentTarget.querySelector('img')
-                    if (img) img.style.transform = 'scale(1.04)'
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = ''
-                    e.currentTarget.style.boxShadow = ''
-                    const img = e.currentTarget.querySelector('img')
-                    if (img) img.style.transform = ''
-                  }}
+                   key={item.id}
+                   onClick={() => setSelectedImage(item)}
+                   style={{
+                     borderRadius: '12px',
+                     overflow: 'hidden',
+                     background: '#ffffff',
+                     border: '1.5px solid #e5e7eb',
+                     cursor: 'pointer',
+                     transition: 'all 0.3s ease',
+                     position: 'relative'
+                   }}
+                   onMouseEnter={(e) => {
+                     e.currentTarget.style.transform = 'translateY(-4px)'
+                     e.currentTarget.style.boxShadow = '0 12px 24px rgba(0,0,0,0.08)'
+                     const img = e.currentTarget.querySelector('img')
+                     if (img) img.style.transform = 'scale(1.04)'
+                   }}
+                   onMouseLeave={(e) => {
+                     e.currentTarget.style.transform = ''
+                     e.currentTarget.style.boxShadow = ''
+                     const img = e.currentTarget.querySelector('img')
+                     if (img) img.style.transform = ''
+                   }}
                 >
                   <div style={{ overflow: 'hidden', position: 'relative', aspectRatio: '4/3' }}>
                     <img
@@ -162,7 +162,7 @@ export default function GalleryPage() {
                     <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--red)', textTransform: 'uppercase', letterSpacing: '1px' }}>
                       {item.category}
                     </span>
-                    <h3 style={{ fontSize: '16px', fontWeight: 800, color: 'var(--text)', marginTop: '4px', marginBottom: '0' }}>
+                    <h3 style={{ fontSize: '16px', fontWeight: 800, color: '#111827', marginTop: '4px', marginBottom: '0' }}>
                       {item.title}
                     </h3>
                   </div>
