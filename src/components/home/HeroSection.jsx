@@ -117,9 +117,14 @@ export default function HeroSection() {
               maxHeight: '300px',
               background: '#111'
             }}
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
           >
+            {/* Transparent swipe-capture overlay — sits above video so touch events aren't eaten by the video element */}
+            <div
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              style={{ position: 'absolute', inset: 0, zIndex: 10 }}
+            />
+
             {/* Video */}
             {settings.videoUrl && (
               <video
