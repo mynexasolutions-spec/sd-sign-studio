@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../lib/supabase'
 
-const BRAND_ICONS = {
+export const BRAND_ICONS = {
   'Audi': 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/audi.svg',
   'Bentley': 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/bentley.svg',
   'BMW': 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/bmw.svg',

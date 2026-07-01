@@ -120,7 +120,7 @@ export default function ProductDetailPage() {
 
         {/* Left: Image */}
         <div>
-          <div style={{ position: 'relative', borderRadius: '20px', overflow: 'hidden', background: '#f5f5f5', border: '1px solid rgba(0,0,0,0.06)', marginBottom: '16px', paddingBottom: '90%', height: 0 }}>
+          <div style={{ position: 'relative', borderRadius: '20px', overflow: 'hidden', background: '#f5f5f5', border: '1px solid rgba(0,0,0,0.06)', marginBottom: '16px' }}>
             {product.badge && (
               <div className="product-badge" style={{ position: 'absolute', top: '20px', left: '20px', fontSize: '13px', padding: '5px 14px', zIndex: 10 }}>
                 {product.badge}
@@ -129,7 +129,7 @@ export default function ProductDetailPage() {
             <img
               src={selectedImage || product.image}
               alt={product.name}
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
             />
           </div>
           {gallery.length > 0 && (
@@ -223,7 +223,7 @@ export default function ProductDetailPage() {
                 borderBottom: activeTab === tab ? '3px solid #E8000D' : '3px solid transparent',
                 background: 'none',
                 cursor: 'pointer',
-                fontSize: '14px',
+                fontSize: '18px',
                 fontWeight: activeTab === tab ? 800 : 600,
                 color: activeTab === tab ? '#E8000D' : '#6b7280',
                 fontFamily: 'var(--font)',

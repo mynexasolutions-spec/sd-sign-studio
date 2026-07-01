@@ -199,7 +199,7 @@ export default function HeroSection() {
             fontSize: '10px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase',
             marginBottom: '14px', alignSelf: 'flex-start'
           }}>
-            ⚡ Signage &amp; Wrapping Studio
+            ⚡ Signage &amp; Vehicle Branding Studio
           </div>
 
           {/* Headline — dark, bold, title case */}
@@ -302,7 +302,7 @@ export default function HeroSection() {
 
         <div className="hero-content" style={{ height: '88vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', maxWidth: '800px', margin: '0 auto', width: '100%', padding: '12px 10px' }}>
           <div className="hero-eyebrow" style={{ background: 'rgba(232,0,13,0.12)', border: '1px solid rgba(232,0,13,0.3)', color: 'var(--red)', margin: '0 0 20px' }}>
-            Signage &amp; Wrapping Studio
+            Signage &amp; Vehicle Branding Studio
           </div>
           <h1 className="hero-headline" style={{ fontWeight: 900, color: 'var(--white)', fontSize: 'clamp(40px, 5.5vw, 64px)', lineHeight: '1.1', letterSpacing: '-1.5px', margin: '16px 0 24px' }}>
             {activeHeadline}
