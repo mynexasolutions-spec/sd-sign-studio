@@ -12,28 +12,28 @@ export default function QuoteModal() {
   }, [])
 
   useEffect(() => {
-    const threeMinutes = 3 * 60 * 1000
+    const twoMinutes = 2 * 60 * 1000
     const now = Date.now()
-    
+
     let firstVisit = sessionStorage.getItem('sd_first_visit')
     if (!firstVisit) {
       firstVisit = now.toString()
       sessionStorage.setItem('sd_first_visit', firstVisit)
     }
-    
+
     const elapsed = now - parseInt(firstVisit, 10)
     const alreadyShown = sessionStorage.getItem('sd_popup_shown')
-    
+
     let timerId
     if (!alreadyShown) {
-      if (elapsed >= threeMinutes) {
+      if (elapsed >= twoMinutes) {
         setIsOpen(true)
         sessionStorage.setItem('sd_popup_shown', 'true')
       } else {
         timerId = setTimeout(() => {
           setIsOpen(true)
           sessionStorage.setItem('sd_popup_shown', 'true')
-        }, threeMinutes - elapsed)
+        }, twoMinutes - elapsed)
       }
     }
 
@@ -42,10 +42,17 @@ export default function QuoteModal() {
     }
   }, [])
 
+  // Once dismissed, never auto-show again this session — regardless of
+  // how it was opened (timer or the open-quote-modal event).
+  const closeModal = () => {
+    sessionStorage.setItem('sd_popup_shown', 'true')
+    setIsOpen(false)
+  }
+
   useEffect(() => {
     if (!isOpen) return
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') setIsOpen(false)
+      if (e.key === 'Escape') closeModal()
     }
     window.addEventListener('keydown', handleKeyDown)
     document.body.style.overflow = 'hidden'
@@ -59,7 +66,7 @@ export default function QuoteModal() {
 
   return (
     <div
-      onClick={() => setIsOpen(false)}
+      onClick={closeModal}
       style={{
         position: 'fixed',
         inset: 0,
@@ -100,7 +107,7 @@ export default function QuoteModal() {
       >
         {/* Close Button */}
         <button
-          onClick={() => setIsOpen(false)}
+          onClick={closeModal}
           style={{
             position: 'absolute',
             top: '20px',
@@ -134,7 +141,7 @@ export default function QuoteModal() {
           </p>
         </div>
 
-        <ContactForm onSuccess={() => setIsOpen(false)} />
+        <ContactForm onSuccess={closeModal} />
       </div>
     </div>
   )

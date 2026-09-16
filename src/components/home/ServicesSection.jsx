@@ -13,12 +13,12 @@ export default function ServicesSection() {
     <section className="full-services-section" id="services">
       <div className="section-inner">
         <div className="section-header" style={{ marginBottom: '32px' }}>
-          <span className="section-eyebrow">Services We Provide</span>
-          <h2 className="section-title">Creative Print <span className="red">Production Agency</span></h2>
+          <span className="section-eyebrow">What We Do</span>
+          <h2 className="section-title">Professional <span className="red">Signage &amp; Van Branding</span></h2>
         </div>
         <div className="services-intro">
-          <p>Premium Hexis vehicle wraps that elevate your brand, protect your paintwork, and turn heads wherever you go.</p>
-          <p>We also specialise in large-format print — banners, leaflets, posters, and more — with free design included on every order.</p>
+          <p>We specialise in custom signage and professional van branding that helps your business stand out. From eye-catching vehicle graphics to shop signs, 3D lettering and illuminated signage, we bring your brand to life.</p>
+          <p>Quality design, premium materials and professional installation — everything you need to make your business impossible to miss.</p>
         </div>
 
         <div className="services-grid">
